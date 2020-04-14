@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
-#import "runtime.h"
 
 extern size_t malloc_size(const void *ptr);
 int main(int argc, const char * argv[]) {

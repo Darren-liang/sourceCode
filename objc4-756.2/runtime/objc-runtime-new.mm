@@ -6394,7 +6394,7 @@ _class_addProperty(Class cls, const char *name,
         proplist->entsizeAndFlags = sizeof(proplist->first);
         proplist->first.name = strdupIfMutable(name);
         proplist->first.attributes = copyPropertyAttributeString(attrs, count);
-        
+        //只是加到了属性列表里面，并没有看到往ivar列表里面增加，所以通过这个函数添加属性，是不会增加成员变量的
         cls->data()->properties.attachLists(&proplist, 1);
         
         return YES;
